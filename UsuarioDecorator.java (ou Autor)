@@ -1,4 +1,4 @@
-// João Vicotr de Jesus Augusto
+// João Victor de Jesus Augusto
 public class UsuarioDecorator extends Usuario {
     private PublicavelInterface estrategiaPublicacao;
 
