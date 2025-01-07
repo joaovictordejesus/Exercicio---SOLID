@@ -1,0 +1,20 @@
+// João Vicotr de Jesus Augusto
+public class UsuarioDecorator extends Usuario {
+    private PublicavelInterface estrategiaPublicacao;
+
+    public UsuarioDecorator(String nome, int idade) {
+        super(nome, idade);
+    }
+
+    public void setEstrategiaPublicacao(PublicavelInterface estrategiaPublicacao) {
+        this.estrategiaPublicacao = estrategiaPublicacao;
+    }
+
+    public void publicar() {
+        if (estrategiaPublicacao == null) {
+            System.out.println("Nenhuma estratégia de publicação definida.");
+        } else {
+            estrategiaPublicacao.publicar();
+        }
+    }
+}
